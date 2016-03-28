@@ -1,0 +1,240 @@
+@import "webfont/stylesheet.css";
+/* <!--  lessc assets/less/custom.less > assets/styles/custom.css  --> */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+input,
+textarea,
+select,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Arial Narrow', Arial;
+  background: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+:focus {
+  outline: 0;
+}
+::-webkit-input-placeholder {
+  color: #869761;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: #869761;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  color: #869761;
+}
+:-ms-input-placeholder {
+  color: #869761;
+}
+.center {
+  width: 600px;
+  margin: 0 auto;
+  padding: 0px 30px 0px 30px;
+}
+.contact {
+  margin-top: 10%;
+}
+.contact .contact-box {
+  position: relative;
+  height: 350px;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 0 15px 1px #97bf42;
+}
+.contact .contact-box h1 {
+  color: #176492;
+  font-size: 30px;
+  text-align: center;
+  line-height: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.contact .contact-box .blocks {
+  width: 330px;
+  height: 70%;
+  border-right: solid 1px #d1d6da;
+  float: left;
+}
+.contact .contact-box .blocks ul {
+  margin-top: 50px;
+}
+.contact .contact-box .blocks ul li {
+  padding-left: 20px;
+  margin-bottom: 5px;
+  width: 280px;
+  border-bottom: solid 1px #d1d6da;
+}
+.contact .contact-box .blocks ul li .input_caption {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  color: #475428;
+  width: 25%;
+}
+.contact .contact-box .blocks ul li .display_field {
+  font-size: 14px;
+  line-height: 30px;
+  color: #475428;
+}
+.contact .contact-box .blocks ul li input {
+  background: #F4FAFF;
+  line-height: 30px;
+  font-size: 14px;
+  width: 73%;
+  color: #475428;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.contact .contact-box .blocks ul li .save_button {
+  border-radius: 5px;
+  width: 290px;
+  color: #176492;
+  background: #d1d6da;
+  line-height: 40px;
+  margin-top: 20px;
+}
+.contact .contact-box .blocks ul li .save_button:hover {
+  background: #98a4ad;
+  cursor: pointer;
+}
+.contact .contact-box .blocks ul .save_button {
+  border-bottom: solid 0px #d1d6da;
+}
+.contact .contact-box .blocks .logo {
+  border-left: solid 1px #d1d6da;
+  float: right;
+}
+.contact .contact-box .blocks .logo img {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 48px;
+  margin: auto;
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+}

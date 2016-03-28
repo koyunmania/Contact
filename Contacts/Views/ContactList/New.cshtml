@@ -1,0 +1,43 @@
+﻿@model Contacts.Models.Contact
+@{
+	ViewBag.Title = "New";
+}
+<head>
+	<!-- styles -->
+	<link href="~/Content/styles/Contact.css" rel="stylesheet" />
+
+	<!-- scripts -->
+</head>
+<body>
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken();
+		<div class="contact center">
+			<div class="contact-box">
+				<h1 class="title">Create Contact</h1>
+				<div class="blocks">
+					<ul>
+						<li>
+							@Html.LabelFor(model => model.Name, htmlAttributes: new {@class = "input_caption"})
+							@Html.EditorFor(model => model.Name, new { htmlAttributes = new { placeholder = "Name Surname" } })
+						</li>
+						<li>
+							@Html.LabelFor(model => model.PhoneNum, htmlAttributes: new {@class = "input_caption"})
+							@Html.EditorFor(model => model.PhoneNum, new { htmlAttributes = new { placeholder = "+905## ### ## ##"} } )
+						</li>
+						<li>
+							@Html.LabelFor(model => model.Email, htmlAttributes: new {@class = "input_caption"})
+							@Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = "user@domain.com"}})
+						</li>
+						<li class="button">
+							<input type="submit" value="Save" class="save_button"/>
+						</li>
+					</ul>
+					<div class="logo">
+						<img src="~/Content/images/user_default.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</body>

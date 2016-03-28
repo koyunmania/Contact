@@ -1,0 +1,290 @@
+@import "webfont/stylesheet.css";
+/* <!--  lessc assets/less/custom.less > assets/styles/custom.css  --> */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+input,
+textarea,
+select,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Arial Narrow', Arial;
+  background: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+:focus {
+  outline: 0;
+}
+::-webkit-input-placeholder {
+  color: #869761;
+  font-family: 'Arial Narrow', Arial;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: #869761;
+  font-family: 'Arial Narrow', Arial;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  color: #869761;
+  font-family: 'Arial Narrow', Arial;
+}
+:-ms-input-placeholder {
+  color: #869761;
+  font-family: 'Arial Narrow', Arial;
+}
+.center {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0px 30px 0px 30px;
+}
+.contacts-page {
+  margin-top: 2%;
+}
+.contacts-page .contacts-window {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 550px;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 1px #97bf42;
+}
+.contacts-page .contacts-window .menu {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+  color: #475428;
+  font-size: 14px;
+  line-height: 40px;
+}
+.contacts-page .contacts-window .menu li {
+  float: left;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.contacts-page .contacts-window .menu .menu-left {
+  float: left;
+}
+.contacts-page .contacts-window .menu .menu-left .search {
+  border: solid 1px #869761;
+  color: #869761;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 520px;
+  border-radius: 4px;
+}
+.contacts-page .contacts-window .menu .menu-left .search input {
+  background: transparent;
+  width: 500px;
+  color: #475428;
+}
+.contacts-page .contacts-window .menu .menu-right {
+  float: right;
+}
+.contacts-page .contacts-window .menu .menu-right .user-name {
+  font-weight: bold;
+  font-style: italic;
+}
+.contacts-page .contacts-window .menu span {
+  font-size: 12px;
+}
+.contacts-page .contacts-window .menu a {
+  border: solid 1px #869761;
+  display: inline-block;
+  background: #b3ca82;
+  line-height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  color: #475428;
+  font-size: 10px;
+  font-weight: bold;
+}
+.contacts-page .contacts-window .menu a:hover {
+  opacity: .6;
+}
+.contacts-page .contacts-window .contacts table {
+  width: 100%;
+}
+.contacts-page .contacts-window .contacts .table-header {
+  text-align: center;
+  background: #adcfe4;
+  color: #176492;
+  line-height: 30px;
+}
+.contacts-page .contacts-window .contacts .table-header tr th {
+  width: 25%;
+}
+.contacts-page .contacts-window .contacts .table-header tr th a {
+  color: white;
+  font-weight: bold;
+  background: #4B83A4;
+  line-height: 20px;
+  width: 20px;
+  border-radius: 5px;
+}
+.contacts-page .contacts-window .contacts .table-header tr th a:hover {
+  opacity: .6;
+}
+.contacts-page .contacts-window .contacts .table-header:first-child {
+  border-top-left-radius: 10px;
+}
+.contacts-page .contacts-window .contacts .table-header:last-child {
+  border-top-right-radius: 10px;
+}
+.contacts-page .contacts-window .contacts .table-body {
+  width: 100%;
+  height: 420px;
+  overflow: auto;
+}
+.contacts-page .contacts-window .contacts .table-body tr td {
+  width: 25%;
+  font-size: 15px;
+  color: #0f415f;
+  text-align: left;
+  line-height: 30px;
+}
+.contacts-page .contacts-window .contacts .table-body tr td.operation {
+  color: #0f415f;
+  text-align: center;
+  font-size: 16px;
+}
+.contacts-page .contacts-window .contacts .table-body tr td.operation a {
+  color: #0f415f;
+}
+.contacts-page .contacts-window .contacts .table-body tr td.operation a p {
+  background: #adcfe4;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 20px;
+}
+.contacts-page .contacts-window .contacts .table-body tr td.operation a:hover {
+  opacity: .6;
+}
+.contacts-page .contacts-window .contacts .table-body tr td:first-child {
+  padding-left: 10px;
+}
+.contacts-page .contacts-window .contacts .table-body tr:nth-child(even) {
+  background: #e9eff3;
+}

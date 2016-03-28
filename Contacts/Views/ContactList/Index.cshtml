@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Contacts.Models.Contact>
+@{
+    ViewBag.Title = "ContactsList";
+}
+
+<head>
+	<!-- styles -->
+	<link href="~/Content/styles/Contacts.css" rel="stylesheet" />
+   
+	<!-- scripts -->
+	<script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+	<script src="~/Scripts/ContactListIndex_Ajax.js"></script>
+</head>
+<body>
+	<div class="contacts-page center">
+		<div class="contacts-window">
+			<div class="menu">
+				<div class="menu-left">
+					<ul>
+						<li>
+							<a href="#">List Contacts</a>
+						</li>
+						<li>
+							@Html.ActionLink("New", "New")
+						</li>
+						<li style="border-right: none">
+							<div class="search fa fa-search"> <input id="searchBox" type="text" placeholder="Search"/></div>
+						</li>
+					</ul>
+				</div>
+				<div class="menu-right">
+					<ul>
+						<li>
+							<span href="#">Logged in as
+								<span class="user-name">Admin</span>
+							</span>
+						</li>
+						<li>
+							<a href="#">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div> <!-- menu -->
+			<div class="contacts">
+				<table>
+					<tr>
+						<td>
+							<table class="table-header">
+								<tr>
+									<th>@Html.DisplayNameFor(model => model.Name)<a href="#" class="fa fa-angle-down"></a></th>
+									<th>@Html.DisplayNameFor(model => model.PhoneNum)<a href="#" class="fa fa-angle-down"></a></th>
+									<th>@Html.DisplayNameFor(model => model.Email)<a href="#" class="fa fa-angle-down"></a></th>
+									<th>Operations</th>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table-body">
+								<table class="body" id="contactsBody">
+									@foreach (var item in Model)
+									{
+										<tr id="contactItem">
+											<td>@Html.DisplayFor(modelItem => item.Name)</td>
+											<td>@Html.DisplayFor(modelItem => item.PhoneNum)</td>
+											<td>@Html.DisplayFor(modelItem => item.Email)</td>
+											<td class="operation">
+												<a href="@Url.Action("Edit/" + item.ID)"><p class="fa fa-pencil"></p></a>
+												<a href="@Url.Action("Delete/" + item.ID)"><p class="fa fa-trash"></p></a>
+											</td>
+										</tr>
+									}
+								</table>  
+							</div>
+						</td>
+					</tr>
+				</table> 
+			</div> <!-- contact-list -->
+		</div> <!-- contacts-window -->
+	</div> <!-- contacts-page -->
+	<button onclick="deleteRows()">DeleteRows</button>
+</body>
+
+<!--
+									<tr>
+										<td>Koyun Mania</td>
+										<td>+90533#######</td>
+										<td>koyun@hotmail.com</td>
+										<td class="operation"><a href="#"><p class="fa fa-pencil"></p></a><a href="#"><p class="fa fa-trash"></p></a></td>
+									</tr>
+									<tr>
+										<td>Ko Yunmanianiac</td>
+										<td>+90533#######</td>
+										<td>Ko_Yunmanianiac@hotmail.com</td>
+										<td class="operation"><a href="#"><p class="fa fa-pencil"></p></a><a href="#"><p class="fa fa-trash"></p></a></td>
+									</tr>
+									<tr>
+										<td>Koy unMan</td>
+										<td>+90533#######</td>
+										<td>koyunman@hotmail.com</td>
+										<td class="operation"><a href="#"><p class="fa fa-pencil"></p></a><a href="#"><p class="fa fa-trash"></p></a></td>
+									</tr>
+-->

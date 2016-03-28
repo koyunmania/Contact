@@ -1,0 +1,227 @@
+@import "webfont/stylesheet.css";
+/* <!--  lessc assets/less/custom.less > assets/styles/custom.css  --> */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+input,
+textarea,
+select,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Arial Narrow', Arial;
+  background: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+:focus {
+  outline: 0;
+}
+::-webkit-input-placeholder {
+  color: #869761;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: #869761;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  color: #869761;
+}
+:-ms-input-placeholder {
+  color: #869761;
+}
+.center {
+  width: 600px;
+  margin: 0 auto;
+  padding: 0px 30px 0px 30px;
+}
+.login {
+  margin-top: 10%;
+}
+.login .login-box {
+  position: relative;
+  height: 350px;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 0 15px 1px #97bf42;
+}
+.login .login-box h1 {
+  color: #176492;
+  font-size: 30px;
+  text-align: center;
+  line-height: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.login .login-box .blocks {
+  width: 330px;
+  height: 70%;
+  border-right: solid 1px #d1d6da;
+  float: left;
+}
+.login .login-box .blocks ul {
+  margin-top: 0px;
+}
+.login .login-box .blocks ul li {
+  padding-left: 20px;
+  margin-bottom: 5px;
+  width: 290px;
+}
+.login .login-box .blocks ul li button {
+  border-radius: 5px;
+  width: 290px;
+  color: #176492;
+  background: #d1d6da;
+  line-height: 40px;
+  margin-top: 20px;
+}
+.login .login-box .blocks ul li button:hover {
+  background: #98a4ad;
+  cursor: pointer;
+}
+.login .login-box .blocks ul li p {
+  border-radius: 5px;
+  color: #475428;
+  background: #b3ca82;
+  line-height: 40px;
+  padding-left: 25px;
+}
+.login .login-box .blocks ul li p span {
+  width: 20px;
+}
+.login .login-box .blocks ul li p input {
+  padding-left: 25px;
+  color: #475428;
+  background: transparent;
+  width: 185px;
+}
+.login .login-box .blocks ul li p a {
+  color: #475428;
+  padding-right: 5px;
+}
+.login .login-box .blocks .logo {
+  border-left: solid 1px #d1d6da;
+  float: right;
+}
+.login .login-box .blocks .logo img {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+}

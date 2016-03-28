@@ -1,0 +1,49 @@
+﻿@model Contacts.Models.Contact
+
+@{ 
+	ViewBag.title = "Edit";
+}
+<head>
+	<!-- styles -->
+	<link href="~/Content/styles/Contact.css" rel="stylesheet" />
+   
+	<!-- scripts -->
+</head>
+<body>
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken();
+
+		<div class="contact center">
+			<div class="contact-box">
+				<h1 class="title">Edit Contact</h1>
+				<div class="blocks">
+					@Html.HiddenFor(model => model.ID)
+					<ul>
+						<li>
+							@Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "input_caption" } )
+							@Html.EditorFor(model => model.Name)
+							@Html.ValidationMessageFor(model => model.Name)
+						</li>
+						<li>
+							@Html.LabelFor(model => model.PhoneNum, htmlAttributes: new { @class = "input_caption" })
+							@Html.EditorFor(model => model.PhoneNum)
+							@Html.ValidationMessageFor(model => model.PhoneNum)
+						</li>
+						<li>
+							@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "input_caption" })
+							@Html.EditorFor(model => model.Email)
+							@Html.ValidationMessageFor(model => model.Email)
+						</li>
+						<li class="button">
+							<input type="submit" value="Save" class="save_button" />
+						</li>
+					</ul>
+					<div class="logo">
+						<img src="~/Content/images/user_default.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</body>

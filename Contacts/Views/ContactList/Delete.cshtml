@@ -1,0 +1,51 @@
+﻿@model Contacts.Models.Contact
+
+@{
+	ViewBag.Title = "Delete Confirmation";
+}
+
+<!DOCTYPE html>
+
+<head>
+	<!-- styles -->
+	<link href="~/Content/styles/Contact.css" rel="stylesheet" />
+
+	<!-- scripts -->
+</head>
+<body>
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+		<div class="contact center">
+			<div class="contact-box">
+				<h1 class="title">Confirm Deleteion</h1>
+				<div class="blocks">
+					<ul>
+						<li>
+							@Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "input_caption"})
+							<span class="display_field">@Html.DisplayFor(model => model.Name)</span>
+						</li>
+						<li>
+							@Html.LabelFor(model => model.PhoneNum, htmlAttributes: new { @class = "input_caption" })
+							<span class="display_field">@Html.DisplayFor(model => model.PhoneNum)</span>
+						</li>
+						<li>
+							@Html.LabelFor(model => model.Email, htmlAttributes: new {@class = "input_caption"})
+							<span class="display_field">@Html.DisplayFor(model => model.Email)</span>
+						</li>
+						<li>
+							<input type="submit" value="Delete" class="save_button"/>
+						</li>
+						<li>
+							<a class="save_button" href="@Url.Action("Index/")">Cancel</a>
+						</li>
+
+					</ul>
+					<div class="logo">
+						<img src="assets/images/user_default.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</body>

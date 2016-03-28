@@ -1,0 +1,165 @@
+/* <!--  lessc assets/less/custom.less > assets/styles/custom.css  --> */
+
+@import "webfont/stylesheet.css";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, tt, var,
+center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea, select, button,  
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Arial Narrow', Arial;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+@blue: #176492;
+@green: #97bf42;
+@lightgreen:#B3CA82;
+@middlegreen: #869761;
+@darkgreen: #475428;
+@red: #f2080b;
+@grey: #d1d6da;
+
+//placeholder text color
+::-webkit-input-placeholder {
+   color: @middlegreen;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: @middlegreen;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: @middlegreen;  
+}
+:-ms-input-placeholder {  
+   color: @middlegreen;  
+}
+
+.center {
+	width: 600px;
+	margin: 0 auto;
+	padding: 0px 30px 0px 30px;
+}
+
+.login {
+	margin-top: 10%;
+	.login-box {
+		position: relative;
+		height: 350px;
+		border-radius: 20px;
+		display: block;
+		box-shadow: 0 0 15px 1px @green;
+		h1 {
+			color: @blue;
+			font-size: 30px;
+			text-align: center;
+			line-height: 20px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		.blocks {
+			width: 330px;
+			height: 70%;
+			border-right: solid 1px @grey;
+			float: left;
+			ul {
+				margin-top: 20px;
+				li {
+					padding-left: 20px;
+					margin-bottom: 5px;
+					width: 290px;
+					a {
+						float: right;
+						padding-top: 5px;
+						font-size: 12px;
+						color: @blue;
+					}
+					button {
+						border-radius: 5px;
+						width: 290px;
+						color: @blue;
+						background: @grey;
+						line-height: 40px;
+						margin-top: 20px;
+						&:hover {
+							background: darken(@grey, 20%);
+							cursor: pointer;
+						}
+							
+					}
+					p {
+						border-radius: 5px;
+						color: @darkgreen;
+						background: @lightgreen;
+						line-height: 40px;
+						padding-left: 25px;
+						span {
+							width: 20px;
+						}
+						input {
+							padding-left: 15px;
+							//width: 100px;
+							color: @darkgreen;
+							background: transparent;
+						}
+					}
+				}
+			}
+			.logo {
+				border-left: solid 1px @grey;
+				float: right;
+				img {
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: 10px;
+					margin: auto;
+				}
+			}
+		}
+	}
+}
