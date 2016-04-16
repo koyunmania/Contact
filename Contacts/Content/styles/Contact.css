@@ -159,7 +159,7 @@ a {
   display: block;
   box-shadow: 0 0 15px 1px #97bf42;
 }
-.contact .contact-box h1 {
+.contact .contact-box .title {
   color: #176492;
   font-size: 30px;
   text-align: center;
@@ -180,6 +180,8 @@ a {
   padding-left: 20px;
   margin-bottom: 5px;
   width: 280px;
+}
+.contact .contact-box .blocks ul .withBorder {
   border-bottom: solid 1px #d1d6da;
 }
 .contact .contact-box .blocks ul li .input_caption {
@@ -210,19 +212,24 @@ a {
 }
 .contact .contact-box .blocks ul li .save_button {
   border-radius: 5px;
-  width: 290px;
+  width: 46%;
   color: #176492;
   background: #d1d6da;
   line-height: 40px;
   margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 2%;
+  margin-left: 2%;
 }
 .contact .contact-box .blocks ul li .save_button:hover {
   background: #98a4ad;
   cursor: pointer;
 }
-.contact .contact-box .blocks ul .save_button {
+/*.contact .contact-box .blocks ul .save_button {
   border-bottom: solid 0px #d1d6da;
-}
+}*/
 .contact .contact-box .blocks .logo {
   border-left: solid 1px #d1d6da;
   float: right;

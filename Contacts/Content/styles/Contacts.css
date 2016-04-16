@@ -230,6 +230,10 @@ a {
 }
 .contacts-page .contacts-window .contacts .table-header tr th {
   width: 25%;
+  text-align: left;
+}
+.contacts-page .contacts-window .contacts .table-header tr th:last-child {
+  text-align: center;
 }
 .contacts-page .contacts-window .contacts .table-header tr th a {
   color: white;
@@ -238,6 +242,9 @@ a {
   line-height: 20px;
   width: 20px;
   border-radius: 5px;
+  text-align: center;
+  margin-left: 3px;
+  text-decoration: none;
 }
 .contacts-page .contacts-window .contacts .table-header tr th a:hover {
   opacity: .6;

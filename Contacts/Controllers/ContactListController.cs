@@ -10,18 +10,23 @@ using Contacts.Models;
 
 namespace contacts.Controllers
 {
+	[Authorize]
     public class ContactListController : Controller
     {
 		private ContactDBContext db = new ContactDBContext();
-		// GET: Contacts
-		/*public ActionResult Index()
+        // GET: Contacts
+        /*public ActionResult Index()
         {
             return View(db.Contacts.ToList());
         }*/
-		public JsonResult updateList()
+        public JsonResult updateList(String searchStr)
 		{
-			return Json(db.Contacts.ToList(), JsonRequestBehavior.AllowGet);
-		}
+            var contacts = from c in db.Contacts
+                           where c.Name.Contains(searchStr) || c.PhoneNum.Contains(searchStr) || c.Email.Contains(searchStr)
+                           select c;
+            //return Json(db.Contacts.ToList(), JsonRequestBehavior.AllowGet);
+            return Json(contacts, JsonRequestBehavior.AllowGet);
+        }
 		public ActionResult Index(string searchString)
 		{
 			var contacts = from c in db.Contacts
@@ -73,9 +78,19 @@ namespace contacts.Controllers
 			}
 			return View(contact);
 		}
-		public ActionResult Contact()
+        [HttpGet]
+		public ActionResult Contact(int? id)
 		{
-			return View();
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Contact contact = db.Contacts.Find(id);
+            if(contact == null)
+            {
+                return HttpNotFound();
+            }
+			return View(contact);
 		}
 		public ActionResult Delete(int? id)
 		{

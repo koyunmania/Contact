@@ -9,7 +9,9 @@
    
 	<!-- scripts -->
 	<script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
-	<script src="~/Scripts/ContactListIndex_Ajax.js"></script>
+    <script type="text/javascript" src="~/Scripts/ContactListIndex.js"></script>
+    
+    <!-- user script -->
 </head>
 <body>
 	<div class="contacts-page center">
@@ -24,6 +26,10 @@
 							@Html.ActionLink("New", "New")
 						</li>
 						<li style="border-right: none">
+                            <!--@*using (Html.BeginForm("updateList","ContactList", FormMethod.Post))
+                            {
+                                <div class="search fa fa-search">@Html.TextBox("searchBox", null, new { placeholder = "Search" })</div>
+                            } *@-->
 							<div class="search fa fa-search"> <input id="searchBox" type="text" placeholder="Search"/></div>
 						</li>
 					</ul>
@@ -46,31 +52,35 @@
 					<tr>
 						<td>
 							<table class="table-header">
-								<tr>
-									<th>@Html.DisplayNameFor(model => model.Name)<a href="#" class="fa fa-angle-down"></a></th>
-									<th>@Html.DisplayNameFor(model => model.PhoneNum)<a href="#" class="fa fa-angle-down"></a></th>
-									<th>@Html.DisplayNameFor(model => model.Email)<a href="#" class="fa fa-angle-down"></a></th>
-									<th>Operations</th>
-								</tr>
-							</table>
+                                <thead>
+                                    <tr>
+                                        <th>@Html.DisplayNameFor(model => model.Name)<a href="#" class="fa fa-angle-down"></a></th>
+                                        <th>@Html.DisplayNameFor(model => model.PhoneNum)<a href="#" class="fa fa-angle-down"></a></th>
+                                        <th>@Html.DisplayNameFor(model => model.Email)<a href="#" class="fa fa-angle-down"></a></th>
+                                        <th>Operations</th>
+                                    </tr>
+                                </thead>
+                            </table>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div class="table-body">
 								<table class="body" id="contactsBody">
-									@foreach (var item in Model)
-									{
-										<tr id="contactItem">
-											<td>@Html.DisplayFor(modelItem => item.Name)</td>
-											<td>@Html.DisplayFor(modelItem => item.PhoneNum)</td>
-											<td>@Html.DisplayFor(modelItem => item.Email)</td>
-											<td class="operation">
-												<a href="@Url.Action("Edit/" + item.ID)"><p class="fa fa-pencil"></p></a>
-												<a href="@Url.Action("Delete/" + item.ID)"><p class="fa fa-trash"></p></a>
-											</td>
-										</tr>
-									}
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr id="contactItem">
+                                                <td><a href="@Url.Action("Contact/" + item.ID)">@Html.DisplayFor(modelItem => item.Name)</a></td>
+                                                <td>@Html.DisplayFor(modelItem => item.PhoneNum)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                                <td class="operation">
+                                                    <a href="@Url.Action("Edit/" + item.ID)"><p class="fa fa-pencil"></p></a>
+                                                    <a href="@Url.Action("Delete/" + item.ID)"><p class="fa fa-trash"></p></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
 								</table>  
 							</div>
 						</td>
@@ -79,26 +89,4 @@
 			</div> <!-- contact-list -->
 		</div> <!-- contacts-window -->
 	</div> <!-- contacts-page -->
-	<button onclick="deleteRows()">DeleteRows</button>
 </body>
-
-<!--
-									<tr>
-										<td>Koyun Mania</td>
-										<td>+90533#######</td>
-										<td>koyun@hotmail.com</td>
-										<td class="operation"><a href="#"><p class="fa fa-pencil"></p></a><a href="#"><p class="fa fa-trash"></p></a></td>
-									</tr>
-									<tr>
-										<td>Ko Yunmanianiac</td>
-										<td>+90533#######</td>
-										<td>Ko_Yunmanianiac@hotmail.com</td>
-										<td class="operation"><a href="#"><p class="fa fa-pencil"></p></a><a href="#"><p class="fa fa-trash"></p></a></td>
-									</tr>
-									<tr>
-										<td>Koy unMan</td>
-										<td>+90533#######</td>
-										<td>koyunman@hotmail.com</td>
-										<td class="operation"><a href="#"><p class="fa fa-pencil"></p></a><a href="#"><p class="fa fa-trash"></p></a></td>
-									</tr>
--->

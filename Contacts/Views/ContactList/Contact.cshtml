@@ -13,16 +13,19 @@
 		<div class="contact-box">
 			<h1 class="title">Koyun Mania</h1>
 			<div class="blocks">
-				<ul>
+                <ul>
 					<li>
-						<em>Name</em><span>Koyun Mania</span>
+						<em class="input_caption">@Html.DisplayNameFor(model => model.Name)</em><span class="display_field">@Html.DisplayFor(model => model.Name)</span>
 					</li>
 					<li>
-						<em>Phone</em><span>+90533#######</span>
+						<em class="input_caption">@Html.DisplayNameFor(model => model.PhoneNum)</em><span class="display_field">@Html.DisplayFor(model => model.PhoneNum)</span>
 					</li>
 					<li>
-						<em>Email</em><span>koyunmania@koyun.com</span>
+						<em class="input_caption">@Html.DisplayNameFor(model => model.Email)</em><span class="display_field">@Html.DisplayFor(model => model.Email)</span>
 					</li>
+                    <li>
+                        <a href="@Url.Action("Index")" class="save_button">Back</a>
+                    </li>
 				</ul>
 				<div class="logo">
 					<img src="assets/images/user_default.jpg" alt=""/>

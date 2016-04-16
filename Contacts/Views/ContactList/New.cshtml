@@ -9,7 +9,7 @@
 	<!-- scripts -->
 </head>
 <body>
-	@using (Html.BeginForm())
+	@using (Html.BeginForm("New","ContactList",FormMethod.Post))
 	{
 		@Html.AntiForgeryToken();
 		<div class="contact center">
@@ -30,7 +30,7 @@
 							@Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = "user@domain.com"}})
 						</li>
 						<li class="button">
-							<input type="submit" value="Save" class="save_button"/>
+							<input type="submit" value="Save" class="save_button"/><a class="save_button" href="@Url.Action("Index/")">Cancel</a>
 						</li>
 					</ul>
 					<div class="logo">
